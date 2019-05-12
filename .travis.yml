@@ -6,8 +6,9 @@ env:
 before_script:
   - curl -L https://deno.land/x/install/install.sh | sh -s $DENO_VERSION
   - export PATH="$HOME/.deno/bin:$PATH"
+  - npm install -g functional-red-black-tree
   - npm install -g prettier eslint typescript@$TS_VERSION @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-prettier
 script:
   - prettier -c "./**/*.ts"
-  # - eslint **/*.ts --max-warnings=0
+  - eslint **/*.ts --max-warnings=0
   - deno run -A _test.ts
