@@ -1,4 +1,4 @@
-# Deno Templates [![Build Status](https://travis-ci.org/zekth/deno-templates.svg?branch=master)](https://travis-ci.org/zekth/deno-templates)
+# Deno Tiny Templates [![Build Status](https://travis-ci.org/zekth/deno_tiny_templates.svg?branch=master)](https://travis-ci.org/zekth/deno_tiny_templates)
 
 A template parser for Deno.
 
