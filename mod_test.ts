@@ -1,9 +1,8 @@
-import { test, runIfMain } from "https://deno.land/std/testing/mod.ts";
 import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
 import { Template } from "./mod.ts";
 const decoder = new TextDecoder();
 
-test({
+Deno.test({
   name: "Simple Template",
   fn(): void {
     const tmpl = decoder.decode(Deno.readFileSync("./test_data/simple.tmpl"));
@@ -18,7 +17,7 @@ test({
   }
 });
 
-test({
+Deno.test({
   name: "Nested properties",
   fn(): void {
     const tmpl = decoder.decode(
@@ -37,7 +36,7 @@ test({
     );
   }
 });
-test({
+Deno.test({
   name: "Custom brackets",
   fn(): void {
     const tmpl = decoder.decode(
@@ -53,4 +52,3 @@ test({
     );
   }
 });
-runIfMain(import.meta);
